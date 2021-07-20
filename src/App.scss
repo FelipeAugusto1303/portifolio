@@ -1,0 +1,54 @@
+$white-color: #fff;
+$black-color: #000;
+$light-black-color: #2d323b; 
+
+@mixin flex{
+    display: flex;
+}
+
+@mixin image{
+    border-radius: 50px;
+}
+
+@mixin font{
+    font-family: Arial, Helvetica, sans-serif;
+    color: $white-color;
+    font-weight: bold;
+}
+
+.container{
+    @include flex;
+    flex: 1;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.profile-container{
+    @include flex;
+    flex: 2;
+    flex-direction: column;
+    padding: 15px;
+    background-color: $black-color;
+    align-items: center;
+    img{
+        @include image;
+        height: 300px;
+        width: 300px;
+    }
+    p{
+        @include font;
+        font-size: 25px;
+    }
+    ul{
+        @include font;
+        font-size: 25px;
+        li{
+            color: $white-color;
+        }
+    }
+}
+
+.skill-container{
+    flex:6;
+    background-color: $light-black-color;
+}
